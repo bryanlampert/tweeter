@@ -3,8 +3,7 @@
   border-color: #c9cccb;
   border: 1px solid;
   background: linear-gradient(45deg, purple, blue);
-  margin: 0 2em 0 2em;
-
+  margin: 0 2em 2em 2em;
 
 }
 
@@ -22,7 +21,6 @@ textarea {
   padding: 3px 5px 3px 5px;
   margin: 1px 10px 3px 10px;
 
-
 }
 
 input {
@@ -35,4 +33,9 @@ input {
   float: right;
   margin-right: 10px;
   display: inline-block;
+}
+
+.new-tweet span.negative-char-count {
+  color: #ed1728;
+  font-weight: bold;
 }

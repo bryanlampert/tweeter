@@ -23,3 +23,49 @@
   font-size: 200%;
   margin-left: 10px;
 }
+
+#nav-bar button {
+  float: right;
+  height: 60px;
+  border: 1.5px solid black;
+  border-radius: 5px;
+  margin: 10px 0 10px 0;
+  background: #d4fcfb;
+  color: #00c9ae;
+}
+
+#nav-bar button:hover {
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+
+#nav-bar button h2 {
+  font-size: 150%;
+  display: inline-block;
+  font-weight: lighter;
+  margin: 5px 5px 5px 0;
+  padding: 5px 0 5px 0;
+  float: right;
+}
+
+#nav-bar button .composeImage {
+  width: 30px;
+  height: 30px;
+  margin: 8px 5px 5px 5px;
+}
+
+#nav-bar button:hover .composeImage {
+  display: none;
+}
+
+#nav-bar button .composeHover {
+  display: none;
+}
+
+#nav-bar button:hover .composeHover {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 8px 5px 5px 5px;
+}

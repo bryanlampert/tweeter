@@ -17,7 +17,7 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #eee;
+  background: linear-gradient(10deg, #666, #eee);;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -91,6 +91,9 @@ article.tweet .tweet-message {
   padding: 5px;
   margin: 10px;
   line-height: 30px;
+  overflow: visible;
+  max-width: 100%;
+  word-wrap: break-word;
  }
 
  article.tweet footer {

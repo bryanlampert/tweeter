@@ -5,10 +5,16 @@
  */
 $(document).ready(function() {
 
+  $('.composeButton').click(function(){
+    $('.new-tweet').slideToggle("slow", function() {
+      $('textarea').select();
+    });
+  });
+
   function renderTweets(tweets) {
     tweets.forEach(function(tweet) {
       $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     });
   }
 
@@ -44,53 +50,57 @@ $(document).ready(function() {
     );
   }
 
-  // Test / driver code (temporary). Eventually will get this from the server.
-  var tweetData = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": {
-          "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-          "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-          "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
-        },
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": {
-          "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-          "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-          "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
-        },
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    },
-    {
-      "user": {
-        "name": "Johann von Goethe",
-        "avatars": {
-          "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-          "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-          "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-        },
-        "handle": "@johann49"
-      },
-      "content": {
-        "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
-      },
-      "created_at": 1461113796368
-    }
-  ];
+  function loadTweets() {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'json'
+    })
+      .then(function(data){
+        renderTweets(data);
+      });
 
-  renderTweets(tweetData);
+  }
+
+  function postTweets() {
+    let $tweetData = $('textarea').serialize();
+    let $text = ($tweetData).replace('text=', '');
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: $tweetData,
+      success: function(data) {
+        $.getJSON('/tweets', function (tweets) {
+          let lastTweet = tweets[tweets.length - 1];
+          $('#tweets-container').prepend(createTweetElement(lastTweet));
+          $('form').each(function(){
+              this.reset();
+          });
+          let counter = $('.counter')[0];
+          counter.innerHTML = 140;
+        });
+      }
+    });
+
+
+  }
+
+  $('form').submit(function(event) {
+    event.preventDefault();
+    let $text = ($('textarea').serialize()).replace('text=', '');
+    let $removeErrMsg = $('.Tweet-error').remove();
+    if ($text === '' || $text === null) {
+      $removeErrMsg;
+      $(this).append(`<p class="Tweet-error" style="color: red; text-align: center;">Please enter text!</p>`);
+    } else if ($text.length > 140 ) {
+      $removeErrMsg;
+      $(this).append(`<p class="Tweet-error" style="color: red; text-align: center;">Tweet is too long! ..sorry</p>`);
+    } else {
+      $removeErrMsg;
+      postTweets();
+    }
+  });
+
+  loadTweets();
+
 });

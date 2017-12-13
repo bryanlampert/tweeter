@@ -17,6 +17,6 @@ function char() {
 
 $(document).ready(function() {
 
-  $(".new-tweet textarea").keyup(char).keydown(char);
+  $(".new-tweet textarea").on("input", char);
 
 });

@@ -33,10 +33,17 @@ Enjoy!
 
 ## Final Product Screenshots
 Initial Home Page:
-!["Screenshot of Main Page"]()
-Compose New Tweet Button Clicked (hide the compose new tweet form):
-!["Screenshot of Compose Clicked"]()
-Highlighting a Tweet:
-!["Screenshot of Tweet Highlight"]()
+!["Screenshot of Main Page"](https://github.com/bryanlampert/tweeter/blob/master/docs/main-page.png)
 
+Compose New Tweet Button Clicked (hide the compose new tweet form):
+!["Screenshot of Compose Clicked"](https://github.com/bryanlampert/tweeter/blob/master/docs/compose-button-clicked-and-highlighted.png)
+
+Highlighting a Tweet (first tweet in the screenshot):
+!["Screenshot of Tweet Highlight"](https://github.com/bryanlampert/tweeter/blob/master/docs/Tweet-highlighted.png)
+
+Trying to Tweet an empty Tweet:
+!["Screenshot of Trying to Tweet Empty Tweet"](https://github.com/bryanlampert/tweeter/blob/master/docs/empty-tweet.png)
+
+Trying to Tweet more than 140 Characters:
+!["Screenshot of Tweet too long"](https://github.com/bryanlampert/tweeter/blob/master/docs/tweet-too-long.png)
 

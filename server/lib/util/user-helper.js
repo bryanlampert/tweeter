@@ -1,3 +1,6 @@
+// Creating random user (name, handle and avatars)
+// This code supplied by lighthouse and unchanged
+
 "use strict";
 
 const Chance = require("chance");

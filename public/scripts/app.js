@@ -90,7 +90,6 @@ $(document).ready(function() {
       .then(function(data){
         renderTweets(data);
       });
-
   }
 
   // Functino for posting new tweets to the database.
@@ -116,8 +115,6 @@ $(document).ready(function() {
         });
       }
     });
-
-
   }
 
   // When the submit button is clicked in the compose tweet form

@@ -1,5 +1,8 @@
+// Initial file when website is run
+
 "use strict";
 
+// Required dependencies
 const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
@@ -10,6 +13,7 @@ const MONGODB_URI   = "mongodb://localhost:27017/tweeter";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+// Connect to the database
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {
     console.error(`Failed to connect: ${MONGODB_URI}`);

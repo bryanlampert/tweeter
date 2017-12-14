@@ -1,12 +1,15 @@
+/* CSS for the Compose New Tweet Form */
+
+/* CSS for the entire form */
 .new-tweet {
   border-radius: 10px;
-  border-color: #c9cccb;
-  border: 1px solid;
+  border: 0.5px solid #ffffff;
   background: linear-gradient(45deg, purple, blue);
   margin: 0 2em 2em 2em;
 
 }
 
+/* CSS for the text at the top of the form */
 .new-tweet h2 {
   margin: 3px 0.5em 20px 0.5em;
   border-bottom: 2px solid #252625;
@@ -15,6 +18,7 @@
 
 }
 
+/* CSS for the text input section */
 textarea {
   border-radius: 3px;
   width: 95%;
@@ -23,18 +27,20 @@ textarea {
 
 }
 
+/* CSS for the actual submit tweet button in the form */
 input {
   border-radius: 3px;
   margin: 1px 10px 10px 10px;
 }
 
+/* CSS for the character counter */
 .new-tweet span.counter {
   color: #ffffff;
   float: right;
   margin-right: 10px;
   display: inline-block;
 }
-
+/* CSS for the character counter when it is negative */
 .new-tweet span.negative-char-count {
   color: #ed1728;
   font-weight: bold;

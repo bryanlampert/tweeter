@@ -1,0 +1,89 @@
+/* CSS Page for the Navigation Bar */
+
+$primary-colour: #092e47;
+$secondary-colour: #00c9ae;
+$border-radius-sm:  5px;
+$img-dims: 30px;
+$display: inline-block;
+$navheight: 80px;
+
+#nav-bar {
+  position: fixed;
+  height: $navheight;
+  width: 100%;
+  background-color: $secondary-colour;
+  color: $primary-colour;
+  padding: 0 2em 0 2em;
+  z-index: 1;
+  border-bottom: 1px solid $primary-colour;
+
+  @media (max-width: 518px) {
+    button {
+      float: left;
+    }
+    width: 100%;
+    height: $navheight * 2;
+  }
+
+  // Bird logo dimensions and positioning
+  .logo {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-left: 5px;
+  }
+
+  // Styles for the text
+  .header {
+    float: left;
+    line-height: 80px;
+    font-size: 200%;
+    margin-left: 10px;
+  }
+
+  //Styles for the button
+  button {
+    float: right;
+    height: 60px;
+    border: 1.5px dashed $secondary-colour;
+    border-radius: $border-radius-sm;
+    margin: 10px 0 10px 0;
+    background: $primary-colour;
+    color: $secondary-colour;
+
+    // Button hover style
+    &:hover {
+      background: $secondary-colour;
+      color: $primary-colour;
+      cursor: pointer;
+      border: 1.5px dashed $primary-colour;
+      border-radius: $border-radius-sm;
+    }
+
+    // Button text styling
+    h2 {
+      font-size: 150%;
+      display: $display;
+      font-weight: lighter;
+      margin: 5px 5px 5px 0;
+      padding: 5px 0 5px 0;
+      float: right;
+    }
+
+    //Compose image on the button, regular style and mouse hover style
+    .composeImage {
+      width: $img-dims;
+      height: $img-dims;
+      margin: 8px 5px 5px 5px;
+    }
+    &:hover .composeImage, .composeHover {
+      display: none;
+    }
+    &:hover .composeHover {
+      display: $display;
+      width: $img-dims;
+      height: $img-dims;
+      margin: 8px 5px 5px 5px;
+    }
+  }
+}

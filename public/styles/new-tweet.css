@@ -1,47 +1,35 @@
 /* CSS for the Compose New Tweet Form */
-
-/* CSS for the entire form */
 .new-tweet {
   border-radius: 10px;
   border: 0.5px solid #ffffff;
   background: linear-gradient(45deg, purple, blue);
-  margin: 0 2em 2em 2em;
+  margin: 0 2em 2em 2em; }
+  .new-tweet h2 {
+    margin: 3px 0.5em 20px 0.5em;
+    border-bottom: 2px solid #252625;
+    color: #ffffff;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; }
+  @media (max-width: 518px) {
+    .new-tweet {
+      margin-top: 100px; } }
 
-}
-
-/* CSS for the text at the top of the form */
-.new-tweet h2 {
-  margin: 3px 0.5em 20px 0.5em;
-  border-bottom: 2px solid #252625;
-  color: #ffffff;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-
-}
-
-/* CSS for the text input section */
 textarea {
   border-radius: 3px;
   width: 95%;
   padding: 3px 5px 3px 5px;
   margin: 1px 10px 3px 10px;
+  resize: none; }
 
-}
-
-/* CSS for the actual submit tweet button in the form */
 input {
   border-radius: 3px;
-  margin: 1px 10px 10px 10px;
-}
+  margin: 1px 10px 10px 10px; }
 
-/* CSS for the character counter */
 .new-tweet span.counter {
   color: #ffffff;
   float: right;
   margin-right: 10px;
-  display: inline-block;
-}
-/* CSS for the character counter when it is negative */
+  display: inline-block; }
+
 .new-tweet span.negative-char-count {
   color: #ed1728;
-  font-weight: bold;
-}
+  font-weight: bold; }

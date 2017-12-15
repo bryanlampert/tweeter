@@ -19,6 +19,7 @@ Enjoy!
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+4. Start the sass compiler using the `npm run compile-sass` command.
 4. Go to <http://localhost:8080/> in your browser to start tweeting!
 
 ## Dependencies
@@ -46,4 +47,8 @@ Trying to Tweet an empty Tweet:
 
 Trying to Tweet more than 140 Characters:
 !["Screenshot of Tweet too long"](https://github.com/bryanlampert/tweeter/blob/master/docs/tweet-too-long.png)
+
+## Latest Updates
+- CSS updated to using Sass SCSS
+- Added responsive design for smaller screen viewing
 

@@ -1,0 +1,116 @@
+// Main CSS Page
+
+$primary-colour: #092e47;
+$secondary-colour: #00c9ae;
+$border-radius-lg:  10px;
+$border-radius-sm:  5px;
+$mainwidth: 450px;
+
+// Sets the css for the entire page
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+  &:before, &:after {
+    box-sizing: inherit;
+  }
+}
+
+// Sets the css for the entire body section of the page
+body {
+  background: linear-gradient(0deg, $secondary-colour, $primary-colour);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+// Sets the css for the main tag section of the page
+main {
+  width: $mainwidth;
+  margin: auto;
+  padding: 100px 0 20px 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: $mainwidth) {
+  main {
+    width: 100%;
+  }
+}
+// Sets the css for every tweet displayed as well as the mouse hover style
+.tweet {
+  border-radius: $border-radius-lg;
+  margin: 2em;
+  opacity: 0.75;
+  background: #ffffff;
+  &:hover {
+    border: 2px ridge;
+    border-radius: $border-radius-lg;
+    margin: 2em;
+    opacity: 1;
+  }
+}
+
+article.tweet {
+  // Styles for the header of every pic and for the profile picture
+  header {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 9px 9px 0 0;
+    background: linear-gradient(45deg, green, blue);
+    padding: 10px 10px 0 10px;
+    width: 100%;
+    height: 80px;
+    .profile-pic {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #d6d1d2;
+      border-radius: $border-radius-sm;
+      float: left;
+      object-fit: cover;
+    }
+  }
+  // Style for the users name for each tweet
+  .name {
+    margin: 0 5px 5px 10px;
+    display: inline-block;
+    color: #ffffff;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    line-height: 30px;
+  }
+  // Style for the users handle for each tweet
+  .handle {
+    color: #ffffff;
+    line-height: 30px;
+    font-weight: lighter;
+    font-size: 1em;
+    float: right;
+    margin-top: -1px;
+  }
+  // Style for the actual message in the tweet
+  .tweet-message {
+    padding: 5px;
+    margin: 10px;
+    line-height: 30px;
+    overflow: visible;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  // Style for the footer of each tweet including the images on mouse hover
+  footer {
+    box-sizing: border-box;
+    border-top: 1px solid #d6d1d2;
+    padding: 10px;
+    font-size: 0.85em;
+  }
+  .footer-images {
+    display: none;
+  }
+  &:hover .footer-images {
+    display: inline-block;
+    float: right;
+    padding-left: 5px;
+    margin-top: -1px;
+    cursor: pointer;
+  }
+}
+

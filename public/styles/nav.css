@@ -1,6 +1,4 @@
 /* CSS Page for the Navigation Bar */
-
-/* CSS for the entire nav bar */
 #nav-bar {
   position: fixed;
   height: 80px;
@@ -9,77 +7,52 @@
   color: #092e47;
   padding: 0 2em 0 2em;
   z-index: 1;
-  border-bottom: 1px solid #092e47;
-}
-
-/* CSS for the logo in the nav bar */
-#nav-bar .logo {
-  width: 80px;
-  height: 80px;
-  float: left;
-  margin-left: 5px;
-
-}
-
-/* CSS for the header site title in the nav bar */
-#nav-bar .header {
-  float: left;
-  line-height: 80px;
-  font-size: 200%;
-  margin-left: 10px;
-}
-
-/* CSS for the button in the nav bar */
-#nav-bar button {
-  float: right;
-  height: 60px;
-  border: 1.5px dashed #00c9ae;
-  border-radius: 5px;
-  margin: 10px 0 10px 0;
-  background: #092e47;
-  color: #00c9ae;
-}
-
-/* CSS for the button in the nav bar on mouse hovering */
-#nav-bar button:hover {
-  background: #00c9ae;
-  color: #092e47;
-  cursor: pointer;
-  border: 1.5px dashed #092e47;
-  border-radius: 5px;
-}
-
-/* CSS for the text in the nav bar button */
-#nav-bar button h2 {
-  font-size: 150%;
-  display: inline-block;
-  font-weight: lighter;
-  margin: 5px 5px 5px 0;
-  padding: 5px 0 5px 0;
-  float: right;
-}
-
-/* CSS for the nav bar compose image in the nav bar button */
-#nav-bar button .composeImage {
-  width: 30px;
-  height: 30px;
-  margin: 8px 5px 5px 5px;
-}
-
-/* Hides the colourful image on mouse hover for the nav bar button */
-#nav-bar button:hover .composeImage {
-  display: none;
-}
-
-/* Hides the dark image for the nav bar button when not hovered */
-#nav-bar button .composeHover {
-  display: none;
-}
-
-/* Shows the dark image for the nav bar when mouse is hovering */
-#nav-bar button:hover .composeHover {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: 8px 5px 5px 5px;
-}
+  border-bottom: 1px solid #092e47; }
+  @media (max-width: 518px) {
+    #nav-bar {
+      width: 100%;
+      height: 160px; }
+      #nav-bar button {
+        float: left; } }
+  #nav-bar .logo {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-left: 5px; }
+  #nav-bar .header {
+    float: left;
+    line-height: 80px;
+    font-size: 200%;
+    margin-left: 10px; }
+  #nav-bar button {
+    float: right;
+    height: 60px;
+    border: 1.5px dashed #00c9ae;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    background: #092e47;
+    color: #00c9ae; }
+    #nav-bar button:hover {
+      background: #00c9ae;
+      color: #092e47;
+      cursor: pointer;
+      border: 1.5px dashed #092e47;
+      border-radius: 5px; }
+    #nav-bar button h2 {
+      font-size: 150%;
+      display: inline-block;
+      font-weight: lighter;
+      margin: 5px 5px 5px 0;
+      padding: 5px 0 5px 0;
+      float: right; }
+    #nav-bar button .composeImage {
+      width: 30px;
+      height: 30px;
+      margin: 8px 5px 5px 5px; }
+    #nav-bar button:hover .composeImage, #nav-bar button .composeHover {
+      display: none; }
+    #nav-bar button:hover .composeHover {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 8px 5px 5px 5px; }

@@ -30,6 +30,7 @@ Enjoy!
 - Chance
 - MD5
 - MongoDB
+- node-sass
 - nodemon (dev dependency)
 
 ## Final Product Screenshots
